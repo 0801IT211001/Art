@@ -21,9 +21,8 @@ import ColorPicker from "../components/ColorPicker";
 import FilePicker from "../components/FilePicker";
 import AIPicker from "../components/AIPicker";
 
-const Customizer = () => {
+const Customizer = ({ setShowKonva }) => {
   const snap = useSnapshot(state);
-
   const [file, setFile] = useState("");
   const [prompt, setPrompt] = useState("");
   const [generatingImg, setGeneratingImg] = useState(false);
@@ -287,7 +286,7 @@ const Customizer = () => {
 
           {/* Razorpay Payment Button */}
           <motion.div
-               className="absolute z-10 bottom-5 right-5"
+               className="absolute z-10 bottom-5 right-5 flex gap-2"
                    {...fadeAnimation}
             >
             <CustomButton
@@ -296,7 +295,16 @@ const Customizer = () => {
              handleClick={handlePayment}
             customStyles="w-fit px-4 py-2.5 font-bold text-sm"
             />
+
+              <CustomButton
+                type='filled'
+                title='Open Konva'
+                handleClick={() => setShowKonva(true)}
+                customStyles='w-fit px-4 py-2.5 font-bold text-sm'
+              />
           </motion.div>
+          
+
 
 
         </>

@@ -11,12 +11,12 @@ function App() {
     <main className="app transition-all ease-in">
       {!showKonva ? (
         <>
-          <Home setShowKonva={setShowKonva} />
+          <Home />
           <Canvas />
-          <Customizer />
+          <Customizer setShowKonva={setShowKonva} />
         </>
       ) : (
-        <KonvaPage setShowKonva={setShowKonva} />  
+        <KonvaPage setShowKonva={setShowKonva} />
       )}
     </main>
   );

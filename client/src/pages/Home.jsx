@@ -9,7 +9,7 @@ import {
   slideAnimation
 } from '../config/motion'
 
-const Home = ({ setShowKonva }) => {
+const Home = () => {
   const snap = useSnapshot(state)
 
   return (
@@ -48,12 +48,7 @@ const Home = ({ setShowKonva }) => {
                 handleClick={() => state.intro = false}
                 customStyles='w-fit px-4 py-2.5 font-bold text-sm'
               />
-              <CustomButton
-                type='filled'
-                title='Open Konva'
-                handleClick={() => setShowKonva(true)}
-                customStyles='w-fit px-4 py-2.5 font-bold text-sm'
-              />
+              
             </div>
           </motion.div>
         </motion.section>
